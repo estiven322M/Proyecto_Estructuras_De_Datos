@@ -24,27 +24,27 @@ public class BibliotecaGUI extends JFrame {
         panelBotones.add(btnLector);
         panelBotones.add(btnAdmin);
 
-        btnLector.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                setVisible(false); // Oculta la interfaz principal
-                LectorGui lectorGUI = new LectorGui(BibliotecaGUI.this); // Pasamos la referencia de la interfaz principal
-                lectorGUI.setVisible(true);
-            }
-        });
 
-        btnAdmin.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                setVisible(false); // Oculta la interfaz principal
-                new LoguinAdminGui(BibliotecaGUI.this); // Abre la pantalla de login
-            }
+
+        btnLector.addActionListener(e -> {
+            setVisible(false);
+            new LoguinLectorGui(this); // Primero autentica
+        });
+        
+        btnAdmin.addActionListener(e->{
+            setVisible(false);
+            new LoguinAdminGui(this);
         });
 
         // Panel derecho con la imagen
-        JLabel labelImagen = new JLabel();
+        ImageIcon imagenOriginal = new ImageIcon(getClass().getResource("/images/biblioteca.jpg"));
+
+        Image imagenEscalada = imagenOriginal.getImage().getScaledInstance(600, 500, Image.SCALE_SMOOTH);
+        ImageIcon imagenFinal = new ImageIcon(imagenEscalada);
+
+        JLabel labelImagen = new JLabel(imagenFinal);
+
         labelImagen.setHorizontalAlignment(JLabel.CENTER);
-        labelImagen.setIcon(new ImageIcon("/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/resources/Files"));
 
         // Cambia esto a la imagen correcta
         // Agregar paneles al frame

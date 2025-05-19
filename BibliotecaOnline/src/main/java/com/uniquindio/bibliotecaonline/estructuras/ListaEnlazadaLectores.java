@@ -2,89 +2,51 @@ package com.uniquindio.bibliotecaonline.estructuras;
 
 import java.util.Iterator;
 
-public class ListaEnlazadaLectores<Usuario> implements Iterable<Usuario> {
+/**
+ * Implementación especializada de ListaEnlazada para manejar usuarios. Hereda
+ * toda la funcionalidad básica de ListaEnlazada y añade el soporte para
+ * Iterable.
+ *
+ * @param <Usuario> Tipo de usuario que debe implementar Comparable<Usuario>
+ */
+public class ListaEnlazadaLectores<Usuario extends Comparable<Usuario>>
+        extends ListaEnlazada<Usuario>
+        implements Iterable<Usuario> {
 
-    private Nodo<Usuario> primero;
-    private Nodo<Usuario> ultimo;
-    private int tamaño;
-
-    public ListaEnlazadaLectores() {
-        this.primero = null;
-        this.ultimo = null;
-        this.tamaño = 0;
-    }
-
-    public boolean isEmpty() { // verifica si la lista esta vacia
-        return primero == null;
-    }
-
-    public int size() {
-        Nodo temporal =primero;
-        int contador =0;
-        while(temporal  !=null){
-            contador+=1;
-            temporal = temporal.enlace;
-        }
-        return contador;
-    }
-    
-    public void insertarAlInicio(Usuario usuario){
-        Nodo <Usuario> nuevoNodo = new Nodo(usuario);
-        nuevoNodo.enlace=primero;
-        primero =nuevoNodo;
-        if(ultimo == null)
-            ultimo =primero;
-        tamaño++;
-    }
-
-    public void insertarElementoAlFinal(Usuario usuario) {
-        Nodo<Usuario> nuevoNodo = new Nodo(usuario);
-        if (isEmpty()) {
-            primero = nuevoNodo;
-            
-        } else {
-            Nodo<Usuario> temporal = primero;
-            while (temporal.enlace != null) {
-                temporal = temporal.enlace;
-            }
-            temporal.enlace = nuevoNodo;
-        }
-
-    }
-    
-    public void eliminarNodo (Usuario usuario){
-        if(isEmpty()){
-            return;
-        }
-        Nodo <Usuario> temporal = primero, previo = null;
-        if(temporal!= null && temporal.dato.equals(usuario)){
-            primero = temporal.enlace;
-            return;
-        }
-        while(temporal != null && temporal.dato !=usuario){
-            previo = temporal;
-            temporal = temporal.enlace;
-        }
-        if(temporal == null)return;
-            previo.enlace=temporal.enlace;
-        
-        
-    }
-    
-    public boolean busqueda(Usuario usuario){
-        Nodo <Usuario> actual = primero;
-        while(actual != null){
-            if(actual.dato== usuario){
-                return true;
-            }
-            actual = actual.enlace;
-        }
-        return false;
-    }
-
+    /**
+     * Implementación básica del iterador para la lista de lectores
+     */
     @Override
     public Iterator<Usuario> iterator() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return new Iterator<Usuario>() {
+            private Nodo<Usuario> actual = primero;
+
+            @Override
+            public boolean hasNext() {
+                return actual != null;
+            }
+
+            @Override
+            public Usuario next() {
+                if (!hasNext()) {
+                    throw new java.util.NoSuchElementException();
+                }
+                Usuario dato = actual.dato;
+                actual = actual.enlace;
+                return dato;
+            }
+        };
     }
 
+    /**
+     * Busca un usuario en la lista (sobrescribe el método para mejor
+     * legibilidad)
+     *
+     * @param usuario Usuario a buscar
+     * @return true si el usuario existe en la lista
+     */
+    @Override
+    public boolean busqueda(Usuario usuario) {
+        return super.busqueda(usuario);
+    }
 }

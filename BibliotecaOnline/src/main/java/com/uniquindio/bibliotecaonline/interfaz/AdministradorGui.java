@@ -1,5 +1,8 @@
-
 package com.uniquindio.bibliotecaonline.interfaz;
+
+import com.uniquindio.bibliotecaonline.logica.GestorLectores;
+import com.uniquindio.bibliotecaonline.logica.GestorLibros;
+import com.uniquindio.bibliotecaonline.logica.GestorPrestamos;
 
 import javax.swing.JFrame;
 import javax.swing.*;
@@ -7,14 +10,18 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
 public class AdministradorGui extends JFrame {
-    
-    private BibliotecaGUI bibliotecaGUI; // Referencia a la interfaz principal
-    
+
+    private final BibliotecaGUI bibliotecaGUI;
+    private final GestorPrestamos gestor;
+
+    //private BibliotecaGUI bibliotecaGUI; // Referencia a la interfaz principal
     public AdministradorGui(BibliotecaGUI bibliotecaGUI) {
         this.bibliotecaGUI = bibliotecaGUI;
-        
+        GestorLibros gestorLibros = new GestorLibros();
+        GestorLectores gestorLectores = new GestorLectores();
+        this.gestor = new GestorPrestamos(gestorLibros, gestorLectores);
+
         setTitle("Interfaz de Administrador");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -25,8 +32,8 @@ public class AdministradorGui extends JFrame {
         JPanel panelEstadistica = new JPanel();
         JButton btnBuscar = new JButton("Generar Estadísticas");
         JComboBox<String> comboEstadisticas = new JComboBox<>(new String[]{
-            "Seleccione", "Cantidad de préstamos por lector", "Libros más valorados", 
-            "Lectores con más conexiones", "Caminos más cortos entre dos lectores", 
+            "Seleccione", "Cantidad de préstamos por lector", "Libros más valorados",
+            "Lectores con más conexiones", "Caminos más cortos entre dos lectores",
             "Detectar clústeres de afinidad (grupos)"
         });
 
@@ -39,6 +46,8 @@ public class AdministradorGui extends JFrame {
         panelBotones.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10)); // Centra los botones y les da espacio
 
         JButton btnLibros = new JButton("Añadir y eliminar libros");
+        btnLibros.addActionListener(e -> new GestionLibrosGui(this, gestor));
+
         JButton btnUsuarios = new JButton("Gestionar usuarios");
         JButton btnGrafo = new JButton("Visualizar el grafo de afinidad entre lectores");
         JButton btnAtras = new JButton("Atrás");
@@ -69,5 +78,15 @@ public class AdministradorGui extends JFrame {
         });
 
         setVisible(true);
+    }
+
+    // Nueva clase para gestión de libros
+    class GestionLibrosGui extends JFrame {
+
+        public GestionLibrosGui(AdministradorGui parent, GestorPrestamos gestor) {
+            // Implementar interfaz para añadir/eliminar libros
+            // usando los métodos del gestor
+        }
+
     }
 }

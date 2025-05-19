@@ -1,0 +1,56 @@
+Cien años de soledad,Gabriel García Márquez,Ficción,1967,Disponible,4.8
+El principito,Antoine de Saint-Exupéry,Fantasía,1943,Disponible,4.9
+1984,George Orwell,Ciencia ficción,1949,Disponible,4.7
+Orgullo y prejuicio,Jane Austen,Romance,1813,Disponible,4.6
+Matar a un ruiseñor,Harper Lee,Drama,1960,Disponible,4.8
+Don Quijote de la Mancha,Miguel de Cervantes,Ficción,1605,Disponible,4.8
+Crimen y castigo,Fiódor Dostoyevski,Drama,1866,Disponible,4.7
+La Odisea,Homero,Ficción,800 a.C.,Disponible,4.6
+Ulises,James Joyce,Ficción,1922,Disponible,4.2
+Rayuela,Julio Cortázar,Ficción,1963,Disponible,4.5
+La sombra del viento,Carlos Ruiz Zafón,Drama,2001,Disponible,4.7
+Ensayo sobre la ceguera,José Saramago,Ficción,1995,Disponible,4.6
+Pedro Páramo,Juan Rulfo,Ficción,1955,Disponible,4.4
+Los miserables,Victor Hugo,Drama,1862,Disponible,4.7
+Fahrenheit 451,Ray Bradbury,Ciencia ficción,1953,Disponible,4.5
+El túnel,Ernesto Sabato,Drama,1948,Disponible,4.4
+Cumbres borrascosas,Emily Brontë,Romance,1847,Disponible,4.3
+Drácula,Bram Stoker,Fantasía,1897,Disponible,4.5
+Frankenstein,Mary Shelley,Ciencia ficción,1818,Disponible,4.4
+El retrato de Dorian Gray,Oscar Wilde,Ficción,1890,Disponible,4.6
+La casa de los espíritus,Isabel Allende,Ficción,1982,Disponible,4.5
+La tregua,Mario Benedetti,Romance,1960,Disponible,4.4
+El amor en los tiempos del cólera,Gabriel García Márquez,Romance,1985,Disponible,4.7
+El nombre de la rosa,Umberto Eco,Drama,1980,Disponible,4.6
+Siddhartha,Hermann Hesse,Ficción,1922,Disponible,4.5
+Demian,Hermann Hesse,Drama,1919,Disponible,4.4
+La insoportable levedad del ser,Milan Kundera,Ficción,1984,Disponible,4.6
+Rebelión en la granja,George Orwell,Ficción,1945,Disponible,4.6
+La metamorfosis,Franz Kafka,Ficción,1915,Disponible,4.5
+El extranjero,Albert Camus,Ficción,1942,Disponible,4.4
+Tokio Blues,Haruki Murakami,Ficción,1987,Disponible,4.5
+Kafka en la orilla,Haruki Murakami,Fantasía,2002,Disponible,4.6
+Norwegian Wood,Haruki Murakami,Romance,1987,Disponible,4.4
+Las aventuras de Huckleberry Finn,Mark Twain,Ficción,1884,Disponible,4.5
+Moby Dick,Herman Melville,Ficción,1851,Disponible,4.4
+La isla del tesoro,Robert Louis Stevenson,Fantasía,1883,Disponible,4.3
+Veinte mil leguas de viaje submarino,Jules Verne,Ciencia ficción,1870,Disponible,4.5
+La vuelta al mundo en 80 días,Jules Verne,Fantasía,1873,Disponible,4.4
+Viaje al centro de la Tierra,Jules Verne,Ciencia ficción,1864,Disponible,4.3
+El viejo y el mar,Ernest Hemingway,Ficción,1952,Disponible,4.5
+Por quién doblan las campanas,Ernest Hemingway,Drama,1940,Disponible,4.4
+Los juegos del hambre,Suzanne Collins,Ciencia ficción,2008,Disponible,4.3
+Divergente,Veronica Roth,Ciencia ficción,2011,Disponible,4.1
+Harry Potter y la piedra filosofal,J.K. Rowling,Fantasía,1997,Disponible,4.9
+Harry Potter y la cámara secreta,J.K. Rowling,Fantasía,1998,Disponible,4.8
+Harry Potter y el prisionero de Azkaban,J.K. Rowling,Fantasía,1999,Disponible,4.9
+El Hobbit,J.R.R. Tolkien,Fantasía,1937,Disponible,4.8
+El señor de los anillos: La comunidad del anillo,J.R.R. Tolkien,Fantasía,1954,Disponible,4.9
+El señor de los anillos: Las dos torres,J.R.R. Tolkien,Fantasía,1954,Disponible,4.8
+El señor de los anillos: El retorno del rey,J.R.R. Tolkien,Fantasía,1955,Disponible,4.9
+La historia interminable,Michael Ende,Fantasía,1979,Disponible,4.6
+Corazón de tinta,Cornelia Funke,Fantasía,2003,Disponible,4.5
+El código Da Vinci,Dan Brown,Drama,2003,Disponible,4.4
+Ángeles y demonios,Dan Brown,Drama,2000,Disponible,4.3
+
+
