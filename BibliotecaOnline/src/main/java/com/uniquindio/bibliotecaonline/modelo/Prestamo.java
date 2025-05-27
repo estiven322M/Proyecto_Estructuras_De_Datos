@@ -7,6 +7,8 @@ import java.time.LocalDate;
 public class Prestamo implements Comparable<Prestamo> {
     
     private Libro libro;
+    private boolean devuelto;
+    private LocalDate fechaDevolucionEfectiva;
     private LocalDate fechaPrestamo;
     private LocalDate fechaDevolucion;
 
@@ -41,10 +43,31 @@ public class Prestamo implements Comparable<Prestamo> {
     }
     
     
+    
 
     @Override
     public int compareTo(Prestamo otro) {
         return this.fechaPrestamo.compareTo(otro.fechaPrestamo);
+    }
+
+    public void setFechaDevolucionEfectiva(LocalDate fechaDevolucionEfectiva) {
+        this.fechaDevolucionEfectiva = fechaDevolucionEfectiva;
+    }
+    public LocalDate getFechaDevolucionEfectiva() {
+        return this.fechaDevolucionEfectiva;
+    }
+
+    public void setDevuelto(boolean devuelto) {
+        this.devuelto=devuelto;
+         
+    }
+
+    public boolean isDevuelto() {
+       return this.devuelto; 
+    }
+
+    Object getFechaDevolucionEsperada() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

@@ -1,20 +1,22 @@
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/estructuras/ArbolBinarioBusqueda.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/estructuras/ListaEnlazada.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/estructuras/ListaEnlazadaLectores.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/interfaz/AdministradorGui.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/interfaz/BibliotecaGUI.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/interfaz/LectorGui.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/interfaz/LoguinAdminGui.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/interfaz/LoguinLectorGui.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/interfaz/RegistroLectorGui.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/logica/GestorLectores.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/logica/GestorLibros.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/logica/GestorPrestamos.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/modelo/Administrador.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/modelo/Lector.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/modelo/Libro.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/modelo/LibroPorAutor.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/modelo/LibroPorCategoria.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/modelo/Prestamo.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/modelo/Usuario.java
-/home/user/Escritorio/Estructuras de Datos/Proyecto/BibliotecaOnline/src/main/java/com/uniquindio/bibliotecaonline/modelo/Valoracion.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\estructuras\ListaEnlazada.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\modelo\LibroPorCategoria.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\estructuras\ListaEnlazadaLectores.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\modelo\Usuario.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\modelo\Valoracion.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\interfaz\LoguinAdminGui.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\modelo\Administrador.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\modelo\Lector.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\interfaz\LectorGui.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\estructuras\ArbolBinarioBusqueda.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\logica\GestorPrestamos.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\interfaz\DialogoValorarLibros.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\modelo\DialogoMisPrestamos.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\modelo\Libro.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\interfaz\BibliotecaGUI.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\modelo\Prestamo.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\modelo\LibroPorAutor.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\interfaz\LoguinLectorGui.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\interfaz\AdministradorGui.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\logica\GestorLibros.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\interfaz\RegistroLectorGui.java
+C:\Users\jsmendez\Desktop\Proyecto_Estructuras_De_Datos-main\BibliotecaOnline\src\main\java\com\uniquindio\bibliotecaonline\logica\GestorLectores.java

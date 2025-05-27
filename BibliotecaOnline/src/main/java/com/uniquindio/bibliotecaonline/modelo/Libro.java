@@ -1,30 +1,37 @@
 
 package com.uniquindio.bibliotecaonline.modelo;
 
+import com.uniquindio.bibliotecaonline.estructuras.ListaEnlazada;
+
 
 
 public class Libro implements Comparable<Libro> {
     private String titulo;
     private String autor;
-    private String categoria;
+    private String categoria; // o genero
     private int añoPublicacion; 
     private String estado; 
     private double calificacion;
-
+    
+    private ListaEnlazada<Valoracion> valoracionesRecibidas; //  Lista de valoraciones para este libro
     // Constantes para los estados
     public static final String DISPONIBLE = "Disponible";
     public static final String PRESTADO = "Prestado";
+    
+    
 
-    public Libro(String titulo, String autor, String categoria, int añoPublicacion, String estado, double calificacion) {
+       // constructor que recibe todos los parametros
+    public Libro(String titulo, String autor, String categoria, int añoPublicacion, String estado, double calificacionInicial) {
         this.titulo = titulo;
         this.autor = autor;
         this.categoria = categoria;
         this.añoPublicacion = añoPublicacion;
         setEstado(estado); // Usamos el setter para validación
-        this.calificacion = calificacion;
+        this.calificacion = calificacionInicial;
+        this.valoracionesRecibidas=new ListaEnlazada<>();
     }
     
-    // Constructor simplificado para búsquedas
+     // Constructor simplificado para búsquedas por título (usado en GestorPrestamos)
     public Libro(String titulo) {
         this.titulo = titulo;
         // Inicializar otros campos con valores por defecto
@@ -33,10 +40,21 @@ public class Libro implements Comparable<Libro> {
         this.añoPublicacion = 0;
         this.estado = DISPONIBLE;
         this.calificacion = 0.0;
+        this.valoracionesRecibidas=new ListaEnlazada<>(); //Inicializar lista
     }
     
     @Override
     public int compareTo(Libro otro) {
+        //return this.titulo.compareToIgnoreCase(otro.titulo);
+        if (this.titulo == null && otro.titulo == null) {
+            return 0;
+        }
+        if (this.titulo == null) {
+            return -1; // nulls primero
+        }
+        if (otro.titulo == null) {
+            return 1;
+        }
         return this.titulo.compareToIgnoreCase(otro.titulo);
     }
     
@@ -45,12 +63,17 @@ public class Libro implements Comparable<Libro> {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Libro libro = (Libro) obj;
-        return titulo.equalsIgnoreCase(libro.titulo);
+        // Compara por un identificador único si lo tienes, o por título.
+        // Para el funcionamiento con el árbol de búsqueda por título,
+        // la igualdad basada en título (ignorando mayúsculas/minúsculas) es crucial.
+        
+        return titulo != null ? titulo.equalsIgnoreCase(libro.titulo) : libro.titulo == null;
     }
     
     @Override
     public int hashCode() {
-        return titulo.toLowerCase().hashCode();
+        // Coherente con equals
+        return titulo != null ? titulo.toLowerCase().hashCode() : 0;
     }
 
     // Getters y Setters
@@ -102,12 +125,35 @@ public class Libro implements Comparable<Libro> {
         return calificacion;
     }
 
-    public void setCalificacion(double calificacion) {
-        // Validar que la calificación esté entre 0 y 5
-        if (calificacion < 0 || calificacion > 5) {
-            throw new IllegalArgumentException("La calificación debe estar entre 0 y 5");
+//    public void setCalificacion(double calificacion) {
+//        // Validar que la calificación esté entre 0 y 5
+//        if (calificacion < 0 || calificacion > 5) {
+//            throw new IllegalArgumentException("La calificación debe estar entre 0 y 5");
+//        }
+//        this.calificacion = calificacion;
+//    }
+    
+     public void agregarValoracionRecibida(Valoracion valoracion) {
+        if (valoracion != null && valoracion.getLibro().equals(this)) { // Asegurar que la valoración es para este libro
+            this.valoracionesRecibidas.insertarElementoAlFinal(valoracion);
+            recalcularCalificacionPromedio();
         }
-        this.calificacion = calificacion;
+    }
+     
+     public ListaEnlazada<Valoracion> getValoracionesRecibidas() {
+        return valoracionesRecibidas;
+    }
+     
+      private void recalcularCalificacionPromedio() {
+        if (valoracionesRecibidas.isEmpty()) {
+            this.calificacion = 0.0; // O alguna calificación base si no hay valoraciones
+            return;
+        }
+        double sumaCalificaciones = 0;
+        for (Valoracion v : valoracionesRecibidas) {
+            sumaCalificaciones += v.getCalificacion();
+        }
+        this.calificacion = sumaCalificaciones / valoracionesRecibidas.size();
     }
     
     // Método para cambiar el estado a prestado
@@ -128,9 +174,13 @@ public class Libro implements Comparable<Libro> {
     
     @Override
     public String toString() {
-        return String.format(
-            "Libro [Título: %s, Autor: %s, Categoría: %s, Año: %d, Estado: %s, Calificación: %.1f]",
-            titulo, autor, categoria, añoPublicacion, estado, calificacion
-        );
+        return "Libro{" +
+               "titulo='" + titulo + '\'' +
+               ", autor='" + autor + '\'' +
+               ", categoria='" + categoria + '\'' +
+               ", añoPublicacion=" + añoPublicacion +
+               ", estado='" + estado + '\'' +
+               ", calificacion=" + calificacion +
+               '}';
     }
 }
